@@ -41,14 +41,14 @@ class _BnbWidgetState extends State<BnbWidget> {
         actionsPadding: EdgeInsets.all(7),
         actions: [
           IconButton(
-            icon: const Icon(Icons.shopping_cart),
+            icon: const Icon(Icons.shopping_cart_outlined),
             onPressed: () {
               // do something
             },
           ),
           Container(
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 221, 217, 217),
+              color: const Color.fromARGB(255, 233, 231, 231),
               borderRadius: BorderRadius.circular(50),
             ),
             child: Row(
@@ -57,6 +57,7 @@ class _BnbWidgetState extends State<BnbWidget> {
               children: [
                 IconButton(
                   icon: Icon(Icons.more_horiz,
+                  size: 20.0,
                   // color: Theme.of(context).colorScheme.primary,
                   ),
                   onPressed: () {
@@ -70,7 +71,10 @@ class _BnbWidgetState extends State<BnbWidget> {
                   thickness: 1,
                 ),
                 IconButton(
-                  icon: const Icon(Icons.cancel),
+                  icon: const Icon(Icons.cancel,
+                  size: 20.0,
+                  ),
+                  
                   onPressed: () {
                     // do something
                   },
