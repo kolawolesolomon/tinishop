@@ -37,6 +37,8 @@ dependencies:
   flex_color_scheme: ^8.1.1
   google_fonts: ^6.2.1
   banner_carousel: ^1.2.1
+  async: ^2.12.0
+  material_color_utilities: ^0.11.1
 
 dev_dependencies:
   flutter_test:

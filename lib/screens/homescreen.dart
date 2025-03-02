@@ -117,7 +117,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 10.0, top: 10.0,),  
+                  margin: EdgeInsets.only(left: 10.0, right:10.0, top: 10.0,),
+                  decoration: BoxDecoration(
+                    // color: Colors.red, physical indeicator for your design purpose
+                  ),
                   child: GridView.builder(
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
@@ -126,18 +129,36 @@ class _HomeScreenState extends State<HomeScreen> {
                     itemBuilder: (context, index){
                       return Container(
                         margin: EdgeInsets.all(5.0),
+                        width: 60,
+                        height: 60,
+                        // decoration: BoxDecoration(
+                        //   color: Theme.of(context).colorScheme.surfaceContainerLow,
+                        //   border: Border.all(
+                        //     color: Colors.grey,
+                        //     width: 1.0,
+                        //     style: BorderStyle.solid),
+                        // ),
                         child: Column(
                           children: [
                             Container(
-                              width: 50.0,
-                              height: 50.0,
+                              width: 30.0,
+                              height: 30.0,
                               decoration: BoxDecoration(
-                                color: Theme.of(context).colorScheme.surfaceContainerLow,
+                                color: Colors.amber,
                                 borderRadius: BorderRadius.circular(50.0),
                               ),
+
                             ),
                             SizedBox(height: 5.0,),
-                            Text('Category $index',),
+                            Wrap(
+                              direction: Axis.vertical,
+                              
+                                children:[ Text(
+                                  'Categories $index',
+                                  softWrap: true,
+                                ),
+                              ]
+                            ),
                           ],
                         ),
                       );
