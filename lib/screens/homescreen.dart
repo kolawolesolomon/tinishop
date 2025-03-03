@@ -1,5 +1,6 @@
 import 'package:banner_carousel/banner_carousel.dart';
 import 'package:flutter/material.dart';
+import 'package:tinishop/res/appdata/productmodel.dart';
 import 'package:tinishop/res/appwidget/appgroupnavigator.dart';
 import 'package:tinishop/res/appwidget/appproductcard.dart';
 
@@ -24,6 +25,8 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: ListView(
+        physics: AlwaysScrollableScrollPhysics(),
+        scrollDirection: Axis.vertical,
         padding: EdgeInsets.only(top: 10.0,),
         children: [
           BannerCarousel(
@@ -46,57 +49,22 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Container(
+                  height: 210,
+                  width: double.maxFinite,
                   margin: EdgeInsets.only(left: 10.0, top: 10.0,),
-                  child: SingleChildScrollView(
+                  child: ListView.builder(
+                    itemCount: products.length,
+                    shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
-                    child: Row(
-                      spacing: 10,
-                      children: [
-                        AppProductCard(
-                          ratingStar: 4,
-                          ratingVote: 47,
-                          price: 100.00,
-                          productname: 'Product 1',
-                          productImage: 'images/33.jpg',
-                        ),
-                        AppProductCard(
-                          ratingStar: 2,
-                          ratingVote: 76,
-                          price: 100.00,
-                          productname: 'Product 1',
-                          productImage: 'images/55.jpg',
-                        ),
-                        AppProductCard(
-                          ratingStar: 5,
-                          ratingVote: 10,
-                          price: 100.00,
-                          productname: 'Product 1',
-                          productImage: 'images/11.jpg',
-                        ),
-                        AppProductCard(
-                          ratingStar: 3,
-                          ratingVote: 56,
-                          price: 100.00,
-                          productname: 'Product 1',
-                          productImage: 'images/22.jpg',
-                        ),
-                        AppProductCard(
-                          ratingStar: 3,
-                          ratingVote: 10,
-                          price: 100.00,
-                          productname: 'Product 1',
-                          productImage: 'images/44.jpg',
-                        ),
-                        AppProductCard(
-                          ratingStar: 3,
-                          ratingVote: 47,
-                          price: 100.00,
-                          productname: 'Product 1',
-                          productImage: 'images/66.jpg',
-                        ),
-                      ],
-                    ),
-                  ),
+                    itemBuilder: (context, index) {
+                      return AppProductCard(
+                        ratingStar: 4,
+                        ratingVote: 47,
+                        price: products[index].productPrice,
+                        productname: products[index].productName,
+                      );
+                    }
+                  )
                 ),
               ],
             ),

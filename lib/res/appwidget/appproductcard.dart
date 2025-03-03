@@ -26,14 +26,18 @@ class AppProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
       height: 200.0,
       width: 120.0,
-      decoration: BoxDecoration(
-        
-        // borderRadius: BorderRadius.circular(10.0),
-        // color: Theme.of(context).colorScheme.primaryContainer,
-      ),
+      margin: EdgeInsets.symmetric(horizontal: 5.0),
+      // decoration: BoxDecoration(
+      //   border: Border.all(
+      //     color: Colors.grey,
+      //     width: 1.0,
+      //   ),
+      // ),
+      
       child: Column(
         spacing: 10.0,
         crossAxisAlignment: CrossAxisAlignment.start,

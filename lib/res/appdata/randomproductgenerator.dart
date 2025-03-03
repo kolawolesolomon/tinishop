@@ -35,8 +35,8 @@ class RandomProductGenerator {
 }
 
 void main() {
-  List<Product> products = RandomProductGenerator.generateProductList(5);
-  for (var product in products) {
-    print(product);
-  }
+  // List<Product> products = RandomProductGenerator.generateProductList(5);
+  // for (var product in products) {
+  //   print(product);
+  // }
 }

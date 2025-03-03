@@ -1,3 +1,4 @@
+import 'package:flutter_faker_plus/flutter_faker_plus.dart';
 class ProductModel{
 
   String? productId;
@@ -24,74 +25,84 @@ class ProductModel{
 List<ProductModel> products = [
   ProductModel(
     productId: "1",
-    productName: "Product 1",
+    productName: EcommerceProduct.generate() .name,
     productDescription: "Product 1 Description",
-    productPrice: 100.0,
+    productPrice: EcommerceProduct.generate() .price,
     productCurrency: "USD",
     productImages: ["assets/images/product1.jpg"],
-    productCategory: "Category 1"
+    productCategory:EcommerceProduct.generate() .category,
   ),
   ProductModel(
     productId: "2",
-    productName: "Product 2",
+    productName:EcommerceProduct.generate() .name,
     productDescription: "Product 2 Description",
-    productPrice: 200.0,
+    productPrice: EcommerceProduct.generate() .price,
     productCurrency: "USD",
     productImages: ["assets/images/product2.jpg"],
-    productCategory: "Category 2"
+    productCategory:EcommerceProduct.generate() .category,
   ),
   ProductModel(
-    productId: "3",
-    productName: "Product 3",
+    productId: '3',
+    productName: EcommerceProduct.generate() .name,
     productDescription: "Product 3 Description",
-    productPrice: 300.0,
+    productPrice: EcommerceProduct.generate() .price,
     productCurrency: "USD",
     productImages: ["assets/images/product3.jpg"],
-    productCategory: "Category 3"
+    productCategory:EcommerceProduct.generate() .category,
   ),
   ProductModel(
-    productId: "4",
-    productName: "Product 4",
+    productId: '4',
+    productName: EcommerceProduct.generate() .name,
     productDescription: "Product 4 Description",
-    productPrice: 400.0,
+    productPrice: EcommerceProduct.generate() .price,
     productCurrency: "USD",
     productImages: ["assets/images/product4.jpg"],
-    productCategory: "Category 4"
+    productCategory:EcommerceProduct.generate() .category,
   ),
   ProductModel(
-    productId: "5",
-    productName: "Product 5",
+    productId: '5',
+    productName: EcommerceProduct.generate() .name,
     productDescription: "Product 5 Description",
-    productPrice: 500.0,
+    productPrice: EcommerceProduct.generate() .price,
     productCurrency: "USD",
     productImages: ["assets/images/product5.jpg"],
-    productCategory: "Category 5"
+    productCategory:EcommerceProduct.generate() .category,
   ),
   ProductModel(
-    productId: "6",
-    productName: "Product 6",
+    productId:'6',
+    productName: EcommerceProduct.generate() .name,
     productDescription: "Product 6 Description",
-    productPrice: 600.0,
+    productPrice: EcommerceProduct.generate() .price,
     productCurrency: "USD",
     productImages: ["assets/images/product6.jpg"],
-    productCategory: "Category 6"
+    productCategory:EcommerceProduct.generate() .category,
   ),
   ProductModel(
-    productId: "7",
-    productName: "Product 7",
+    productId: '7',
+    productName: EcommerceProduct.generate() .name,
     productDescription: "Product 7 Description",
-    productPrice: 700.0,
+    productPrice: EcommerceProduct.generate() .price,
     productCurrency: "USD",
     productImages: ["assets/images/product7.jpg"],
-    productCategory: "Category 7"
+    productCategory:EcommerceProduct.generate() .category,
   ),
   ProductModel(
-    productId: "8",
-    productName: "Product 8",
+    productId: '8',
+    productName: EcommerceProduct.generate() .name,
     productDescription: "Product 8 Description",
-    productPrice: 800.0,
+    productPrice: EcommerceProduct.generate() .price,
     productCurrency: "USD",
     productImages: ["assets/images/product8.jpg"],
-    productCategory: "Category 8"
+    productCategory:EcommerceProduct.generate() .category,
+  ),
+  ProductModel(
+    productId:'9',
+    productName: EcommerceProduct.generate() .name,
+    productDescription: "Product 8 Description",
+    productPrice: EcommerceProduct.generate() .price,
+    productCurrency: "USD",
+    productImages: ["assets/images/product8.jpg"],
+    productCategory:EcommerceProduct.generate() .category,
   )
+
 ];
