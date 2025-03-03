@@ -29,6 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
         scrollDirection: Axis.vertical,
         padding: EdgeInsets.only(top: 10.0,),
         children: [
+//Carousel and Banner
           BannerCarousel(
             banners: listBanners,
             activeColor: Theme.of(context).colorScheme.primary,
@@ -37,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
             viewportFraction: 0.95,
             initialPage: 1,
           ),
+//Hot Deals and ListView.Builder of AppProductCard
           Container(
             margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
             child: Column(
@@ -73,6 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
             color: Theme.of(context).colorScheme.surfaceContainerLow,
             thickness: 10.0,
           ),
+//Category and GridView.Builder
           Container(
             margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
             child: Column(
@@ -136,7 +139,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ), 
-          
+          Divider(
+            color: Theme.of(context).colorScheme.surfaceContainerLow,
+            thickness: 10.0,
+          ),
 
           
           //Everything below was generated with AI and I havnet checked them yet!
