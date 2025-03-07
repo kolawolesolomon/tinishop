@@ -1,6 +1,7 @@
 import 'package:banner_carousel/banner_carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:tinishop/res/appdata/productmodel.dart';
+import 'package:tinishop/res/appwidget/appcategorygrid.dart';
 import 'package:tinishop/res/appwidget/appgroupnavigator.dart';
 import 'package:tinishop/res/appwidget/appproductcard.dart';
 
@@ -77,6 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
 //Category and GridView.Builder
           Container(
+            // color: Colors.amber,
             margin: EdgeInsets.only(top: 10.0, bottom: 10.0),
             child: Column(
               children: [
@@ -88,53 +90,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(left: 10.0, right:10.0, top: 10.0,),
+                  margin: EdgeInsets.only(left: 10.0, top: 10.0,),
+                  height: 350.0,
+                  width: double.maxFinite,
                   decoration: BoxDecoration(
                     // color: Colors.red, physical indeicator for your design purpose
                   ),
-                  child: GridView.builder(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    itemCount: 8,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
-                    itemBuilder: (context, index){
-                      return Container(
-                        margin: EdgeInsets.all(5.0),
-                        width: 60,
-                        height: 60,
-                        // decoration: BoxDecoration(
-                        //   color: Theme.of(context).colorScheme.surfaceContainerLow,
-                        //   border: Border.all(
-                        //     color: Colors.grey,
-                        //     width: 1.0,
-                        //     style: BorderStyle.solid),
-                        // ),
-                        child: Column(
-                          children: [
-                            Container(
-                              width: 30.0,
-                              height: 30.0,
-                              decoration: BoxDecoration(
-                                color: Colors.amber,
-                                borderRadius: BorderRadius.circular(50.0),
-                              ),
-
-                            ),
-                            SizedBox(height: 5.0,),
-                            Wrap(
-                              direction: Axis.vertical,
-                              
-                                children:[ Text(
-                                  'Categories $index',
-                                  softWrap: true,
-                                ),
-                              ]
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                  ),
+                  child: AppCategoryGrid(),
                 )
               ],
             ),
